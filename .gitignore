@@ -1,23 +1,47 @@
-# Ignore Python-related cache and build artifacts
-*.egg-info/
-build/
-*.pyc
+# Python
 __pycache__/
-.idea/
+*.py[cod]
+*.pyo
+
+# Virtual environment
 venv/
-dist/
+.env
+.venv/
 
-# Ignore subdirectory caches
-LLM_Judgment_acuracy/__pycache__/
-LLM_Judgment_coverage/__pycache__/
+# Large datasets
+*.csv
+*.pkl
+*.pickle
+data/
+processed_dataset_new_prompt/
 
-# Ignore CSV files in patches_extraction and rating_reviews
-patches_extraction/*.csv
-LLM_Judgment_coverage/*.csv
-rating_reviews/*.csv
+# Training outputs
+output/
+output5/
+checkpoints/
+checkpoint-*/
+runs/
+wandb/
 
-# Ignore large dataset and training files
-training/processed_dataset_new_prompt/
-training/checkpoint-36000/
-training/results_36000/
-preparing_dataset_before_filtering/*.npy
+# Model files / generated model directories
+qwen_coder_0.5b_lora/
+qwen_code_review_lora/
+
+# Hugging Face cache
+.cache/
+huggingface/
+models/
+
+# Python generated files
+*.log
+
+# Java generated files
+*.class
+
+# Test/build output
+test_java/output/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
